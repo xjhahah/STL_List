@@ -125,7 +125,15 @@ public:
 	void PushFront(const T& data);
 	void PopFront();
 	void Insert(iterator pos, const T& data);
-	void Erase(iterator pos);
+	void Erase(iterator pos)
+	{
+		Node* prev = pos._node->_pPre;
+		Node* next = pos._node->_pNext;
+
+		prev->_pNext = next;
+		next->_pPre = prev;
+		delete pos._node;
+	}
 	size_t Size();
 	bool Empty();
 	void Clear();

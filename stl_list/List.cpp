@@ -46,16 +46,6 @@ void List<T>::Insert(iterator pos, const T& data)
 	cur->_pPre = newNode;
 }
 
-template <class T>
-void List<T>::Erase(iterator pos)
-{
-	Node* prev = pos._node->_pPre;
-	Node* next = pos._node->_pNext;
-
-	prev->_pNext = next;
-	next->_pPre = prev;
-	delete pos._node;
-}
 
 template <class T>
 // O(N)µÄËã·¨
@@ -111,7 +101,6 @@ void TestList1()
 		++it;
 	}
 	cout << endl;
-
 }
 
 //²âÊÔoperator*()   operator->()
