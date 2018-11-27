@@ -1,5 +1,9 @@
 #include "List.h"
-int main()
+
+
+
+
+void TestList()
 {
-	return 0;
+	List<int> l;
 }
