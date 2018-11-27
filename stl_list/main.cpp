@@ -1,9 +1,8 @@
 #include "List.h"
 
-
-
 int main()
 {
-	TestList();
+	TestList1();
+	TestList2();
 	return 0;
 }
